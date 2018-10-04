@@ -19,6 +19,7 @@ from apps.core.views import index
 from apps.core import views
 
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^contato/$', views.contact, name='contact'),
     url(r'^produto/$', views.product, name='product'),
