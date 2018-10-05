@@ -22,7 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
     url(r'^contato/$', views.contact, name='contact'),
-    url(r'^produto/$', views.product, name='product'),
-    url(r'^produtos/', include(('apps.catalog.urls', 'apps.catalog'),
+    url(r'^catalogo/', include(('apps.catalog.urls', 'apps.catalog'),
                                namespace='catalog')),
 ]
