@@ -11,8 +11,11 @@ class Category(models.Model):
 
     class Meta:
         verbose_name = 'Categoria'
-        verbose_name_plural = 'Cadegorias'
+        verbose_name_plural = 'Categorias'
         ordering = ['name']
+
+    def __str__(self):
+        return '{0}'.format(self.name)
 
 
 class Product(models.Model):
@@ -33,3 +36,6 @@ class Product(models.Model):
         verbose_name = 'Produto'
         verbose_name_plural = 'Produtos'
         ordering = ['name']
+
+    def __str__(self):
+        return '{0}'.format(self.name)

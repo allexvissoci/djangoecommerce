@@ -1,9 +1,9 @@
 # coding=utf-8
 from django.shortcuts import render
 # from django.http import HttpResponse
+from apps.catalog.models import Category
 
 
-# Create your views here.
 def index(request):
     return render(request, 'index.html')
 
