@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404
 from .models import Product, Category
 from django.views import generic
 
@@ -8,12 +8,14 @@ class ProductsListView(generic.ListView):
     model = Product
     template_name = 'catalog/product_list.html'
     context_object_name = 'product_list'
+    paginate_by = 1
 
 
 class CategoryListView(generic.ListView):
 
     template_name = 'catalog/category.html'
     context_object_name = 'product_list'
+    paginate_by = 1
 
     def get_queryset(self):
         return Product.objects.filter(category__slug=self.kwargs['slug'])
@@ -29,6 +31,7 @@ class ProductListView(generic.ListView):
 
     template_name = 'catalog/product.html'
     context_object_name = 'product'
+    paginate_by = 1
 
     def get_queryset(self):
         return Product.objects.get(slug=self.kwargs['slug'])
