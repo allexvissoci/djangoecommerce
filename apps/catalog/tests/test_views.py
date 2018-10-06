@@ -1,7 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from model_mommy import mommy
-from apps.catalog.models import Product, Category
+from apps.catalog.models import Product
 
 
 class ProductListTestCase(TestCase):
