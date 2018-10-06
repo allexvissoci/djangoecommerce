@@ -19,5 +19,5 @@ class ContactForm(forms.Form):
                     'Contato Django E-commerce',
                     message,
                     settings.DEFAULT_FROM_EMAIL,
-                    [settings.EMAIL_HOST_USER]
+                    [settings.DEFAULT_FROM_EMAIL]
         )
