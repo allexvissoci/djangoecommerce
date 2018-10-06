@@ -28,6 +28,7 @@ urlpatterns = [
         name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(next_page='/'),
         name='logout'),
+    url(r'^registro/$', views.register, name='register'),
     url(r'^catalogo/', include(('apps.catalog.urls', 'apps.catalog'),
                                namespace='catalog')),
 ]
